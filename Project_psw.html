@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>네이버 스타일 홈페이지</title>
+    <style>
+        /* 기본 스타일 */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .container {
+            flex: 1;
+            width: 100%;
+        }
+
+        header {
+            background-color: paleturquoise;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+            width: 100%;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 1.8rem;
+        }
+
+        .links {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: nowrap;
+            width: 100%;
+            background-color: #fff;
+            border-top: 1px solid #ccc;
+            border-bottom: 1px solid #ccc;
+        }
+
+        .links a {
+            flex: 1;
+            text-align: center;
+            text-decoration: none;
+            color: #333;
+            padding: 15px 0;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: color 0.3s;
+            border-right: 1px solid #ddd;
+        }
+
+        .links a:last-child {
+            border-right: none;
+        }
+
+        .content {
+            text-align: center;
+            margin: 30px 0;
+            font-size: 1.2rem;
+            color: #444;
+        }
+
+        footer {
+            text-align: center;
+            padding: 15px 0;
+            background-color: #f1f1f1;
+            color: #666;
+            margin-top: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Project_FallowGun</h1>
+        </header>
+
+        <section class="links">
+            <a href="#" id="game">게임</a>
+            <a href="#" id="github">깃허브 사이트 접속</a>
+            <a href="#" id="update">업데이트 내역</a>
+            <a href="#" id="gameUpdate">게임 업데이트 내역</a>
+            <a href="#" id="about">외주관련공지</a>
+        </section>
+
+        <div class="content" id="content-area">
+            여기에 클릭한 메뉴의 내용이 표시됩니다.
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; Project_FallowGun 홈페이지 모든 권리 보유</p>
+        <p>저작권 침해시 고발하겠습니다.</p>
+    </footer>
+
+    <script>
+        document.getElementById('game').addEventListener('click', function(event) {
+            event.preventDefault();
+            document.getElementById('content-area').innerHTML = '게임에 대한 정보가 여기에 표시됩니다.';
+        });
+
+        document.getElementById('github').addEventListener('click', function(event) {
+            event.preventDefault();
+            document.getElementById('content-area').innerHTML = '<a href = "https://github.com/parksw27">깃허브 사이트로 이동하려면 여기를 클릭하세요.</a> ';
+        });
+
+        document.getElementById('update').addEventListener('click', function(event) {
+            event.preventDefault();
+            document.getElementById('content-area').innerHTML = '최신 업데이트 내역이 여기에 표시됩니다. [+] : 추가 , [-] : 삭제 , [/] 업데이트<br><br>'+
+            `[/] 홈페이지를 수정하였습니다.`;
+        });
+
+        document.getElementById('gameUpdate').addEventListener('click', function(event) {
+            event.preventDefault();
+            document.getElementById('content-area').innerHTML = '게임 업데이트에 대한 상세 내역입니다.[+] : 추가 , [-] : 삭제 , [/] 업데이트';
+        });
+
+        document.getElementById('about').addEventListener('click', function(event) {
+            event.preventDefault();
+            document.getElementById('content-area').innerHTML = '외주 문의 디스코드 : sang_w27로 친추 주세요';
+        });
+    </script>
+</body>
+</html>
