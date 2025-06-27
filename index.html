@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>네이버 스타일 홈페이지</title>
+    <title>PSW.com</title>
     <style>
         /* 기본 스타일 */
         body {
@@ -76,6 +76,22 @@
             color: #666;
             margin-top: auto;
         }
+        /*폰트 스타일 */
+        .add
+        {
+            color: red;
+            font-weight: bold;
+        }
+        .remove
+        {
+            color: orange;
+            font-weight: bold;
+        }
+        .update
+        {
+            color: mediumaquamarine;
+            font-weight: bold;
+        }
     </style>
 </head>
 <body>
@@ -110,13 +126,17 @@
 
         document.getElementById('github').addEventListener('click', function(event) {
             event.preventDefault();
-            document.getElementById('content-area').innerHTML = '<a href = "https://github.com/parksw27">깃허브 사이트로 이동하려면 여기를 클릭하세요.</a> ';
+            document.getElementById('content-area').innerHTML = '<a href = "https://github.com/parksw27">깃허브 사이트로 이동하려면 여기를 클릭하세요.</a> <br><br>'+
+            `*홈페이지에 추가된 게임은 게임코드를 보실 수 없습니다.*`;
         });
 
         document.getElementById('update').addEventListener('click', function(event) {
             event.preventDefault();
-            document.getElementById('content-area').innerHTML = '최신 업데이트 내역이 여기에 표시됩니다. [+] : 추가 , [-] : 삭제 , [/] 업데이트<br><br>'+
-            `[/] 홈페이지를 수정하였습니다.`;
+            document.getElementById('content-area').innerHTML = '[+] : 추가<span class = "remove">[-] : 삭제 </span>  <span class = "update">[/] 업데이트 </span><br><br>'+
+            `<span class = "update">[/] PSW.com 홈페이지를 업데이트하였습니다. </span><br>` +
+            `<span class = "update">[/] 외주관련 주소를 업데이트 하였습니다. </span><br>`+
+            `[+] 깃허브 주소를 추가하였습니다.<br>`+
+            `[+] 도메인 주소를 추가하였습니다. 도메인 추소 : https://parksw27.github.io/Public_HomePagePJ/<br>`;
         });
 
         document.getElementById('gameUpdate').addEventListener('click', function(event) {
