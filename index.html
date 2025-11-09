@@ -1,154 +1,173 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>박상욱 포토폴리오 홈페이지 </title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>박상욱 포트폴리오 홈페이지</title>
+
+    <!-- ✅ 전체 스타일 정의 영역 시작 -->
     <style>
-        /* 기본 스타일 */
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Pretendard', Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f8f9fa;
+            background-color: #f6f9fc;
             color: #333;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-        }
-
-        .container {
-            flex: 1;
-            width: 100%;
         }
 
         header {
-            background-color: paleturquoise;
-            color: white;
-            padding: 10px 0;
+            background: linear-gradient(135deg, #2ac1bc, #6cf7d6);
+            padding: 40px 0;
             text-align: center;
-            width: 100%;
+            color: white;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
         }
-
         header h1 {
             margin: 0;
-            font-size: 1.8rem;
+            font-size: 2.4rem;
+            letter-spacing: -1px;
+        }
+        header p {
+            margin-top: 10px;
+            font-size: 1.1rem;
+            opacity: 0.9;
         }
 
-        .links {
+        nav {
+            background: white;
             display: flex;
-            justify-content: space-between;
-            flex-wrap: nowrap;
-            width: 100%;
-            background-color: #fff;
-            border-top: 1px solid #ccc;
-            border-bottom: 1px solid #ccc;
+            justify-content: center;
+            gap: 20px;
+            padding: 15px 0;
+            border-bottom: 1px solid #ddd;
+            position: sticky;
+            top: 0;
+            z-index: 50;
         }
-
-        .links a {
-            flex: 1;
-            text-align: center;
+        nav a {
+            font-weight: bold;
             text-decoration: none;
             color: #333;
-            padding: 15px 0;
-            font-size: 1.1rem;
-            font-weight: bold;
-            cursor: pointer;
-            transition: color 0.3s;
-            border-right: 1px solid #ddd;
+            padding: 10px 18px;
+            border-radius: 8px;
+            transition: 0.25s;
+        }
+        nav a:hover {
+            background-color: #2ac1bc;
+            color: white;
         }
 
-        .links a:last-child {
-            border-right: none;
-        }
-
-        .content {
+        #content-area {
             text-align: center;
-            margin: 30px 0;
+            max-width: 100%;
+            width: 100%;
+            margin: 0;
+            padding: 40px;
+            background: white;
+            border-radius: 0;
+            box-shadow: none;
             font-size: 1.2rem;
-            color: #444;
+            line-height: 1.9rem;
+            min-height: calc(100vh - 200px);
         }
+
+        .tag-add { color: #ff4d4d; font-weight: bold; }
+        .tag-remove { color: #ff884d; font-weight: bold; }
+        .tag-update { color: #00c48c; font-weight: bold; }
 
         footer {
+            margin-top: 40px;
             text-align: center;
-            padding: 15px 0;
-            background-color: #f1f1f1;
+            padding: 20px 0;
+            font-size: 0.9rem;
+            background: #f1f1f1;
             color: #666;
-            margin-top: auto;
-        }
-        /*폰트 스타일 */
-        .add
-        {
-            color: red;
-            font-weight: bold;
-        }
-        .remove
-        {
-            color: orange;
-            font-weight: bold;
-        }
-        .update
-        {
-            color: mediumaquamarine;
-            font-weight: bold;
         }
     </style>
+    <!-- ✅ 스타일 정의 끝 -->
 </head>
+
 <body>
-    <div class="container">
-        <header>
-            <h1>Project_FallowGun</h1>
-        </header>
+    <!-- ✅ 상단 헤더 영역 -->
+    <header>
+        <h1>Project PSW 포트폴리오</h1>
+        <p>개발 · 게임 · 외주 · 포트폴리오 공개</p>
+    </header>
 
-        <section class="links">
-            <a href="#" id="game">포토폴리오</a>
-            <a href="#" id="github">깃허브 사이트 접속</a>
-            <a href="#" id="update">업데이트 내역</a>
-            <a href="#" id="gameUpdate">포토폴리오 업데이트 내역</a>
-            <a href="#" id="about">문의,외주 관련공지</a>
-        </section>
+    <!-- ✅ 네비게이션 메뉴 영역 -->
+    <nav>
+        <a href="#" id="portfolio">포트폴리오</a>
+        <a href="#" id="github">GitHub</a>
+        <a href="#" id="update">업데이트 내역</a>
+        <a href="#" id="gameUpdate">게임 개발 로그</a>
+        <a href="#" id="contact">문의 / 외주</a>
+    </nav>
 
-        <div class="content" id="content-area">
-            여기에 클릭한 메뉴의 내용이 표시됩니다.
-        </div>
-    </div>
+    <!-- ✅ 메뉴 클릭 시 내용이 표시되는 메인 콘텐츠 영역 -->
+    <div id="content-area">메뉴를 선택하면 내용이 표시됩니다.</div>
 
     <footer>
-        <p>&copy; Project_PSW 홈페이지 모든 권리 보유</p>
-        <p>저작권 침해시 고발하겠습니다.</p>
+        © 2025 PSW Portfolio — All Rights Reserved.
     </footer>
 
+    <!-- ✅ 메뉴 클릭 이벤트 및 동적 콘텐츠 처리 스크립트 -->
     <script>
-        document.getElementById('game').addEventListener('click', function(event) {
-            event.preventDefault();
-            document.getElementById('content-area').innerHTML = '포토폴리오에 대한 정보가 여기에 표시됩니다.';
-        });
+        const c = document.getElementById("content-area");
 
-        document.getElementById('github').addEventListener('click', function(event) {
-            event.preventDefault();
-            document.getElementById('content-area').innerHTML = '<a href = "https://github.com/parksw27">깃허브 사이트로 이동하려면 여기를 클릭하세요.</a> <br><br>'+
-            `*홈페이지에 추가된 게임은 게임코드를 보실 수 없습니다.*`;
-        });
+        document.getElementById("portfolio").onclick = (e) => {
+            e.preventDefault();
+            c.innerHTML = `
+                <h2>📁 포트폴리오</h2>
+                <p>현재 개발 중인 프로젝트 및 완료된 작업물들을 정리해두는 공간입니다.</p>
+                <ul>
+                    <li>Unity TPS 게임 개발</li>
+                    <li>AI · 드론 관련 실험 프로젝트</li>
+                    <li>웹 개발 및 자동화 프로그램</li>
+                </ul>
+            `;
+        };
 
-        document.getElementById('update').addEventListener('click', function(event) {
-            event.preventDefault();
-            document.getElementById('content-area').innerHTML = '[+] : 추가<span class = "remove">[-] : 삭제 </span>  <span class = "update">[/] 업데이트 </span><br><br>'+
-            `<span class = "update">[/] PSW.com 홈페이지를 업데이트하였습니다. </span><br>` +
-            `<span class = "update">[/] 외주관련 주소를 업데이트 하였습니다. </span><br>`+
-            `[+] 깃허브 주소를 추가하였습니다.<br>`+
-            `[+] 도메인 주소를 추가하였습니다. 도메인 추소 : https://parksw27.github.io/Public_HomePagePJ/<br>`;
-        });
+        document.getElementById("github").onclick = (e) => {
+            e.preventDefault();
+            c.innerHTML = `
+                <h2>🔗 GitHub</h2>
+                <a href="https://github.com/parksw27" target="_blank" style="font-size:1.2rem;">👉 GitHub 바로가기</a>
+                <p style="margin-top:20px; color:#777;">일부 게임 프로젝트는 비공개입니다.</p>
+            `;
+        };
 
-        document.getElementById('gameUpdate').addEventListener('click', function(event) {
-            event.preventDefault();
-            document.getElementById('content-area').innerHTML = '포토폴리오 업데이트에 대한 상세 내역입니다.[+] : 추가 , [-] : 삭제 , [/] 업데이트<br><br><br><br><br><br>' + 
-            `포토폴리오 만드는 중....`;
-        });
+        document.getElementById("update").onclick = (e) => {
+            e.preventDefault();
+            c.innerHTML = `
+                <h2>📝 업데이트 내역</h2>
+                <p><span class="tag-update">[/]</span> 홈페이지 UI 전면 개편</p>
+                <p><span class="tag-add">[+]</span> 네비게이션 상단 고정 추가</p>
+                <p><span class="tag-add">[+]</span> 포트폴리오 섹션 추가</p>
+                <p><span class="tag-update">[/]</span> 디자인 개선 및 가독성 향상</p>
+            `;
+        };
 
-        document.getElementById('about').addEventListener('click', function(event) {
-            event.preventDefault();
-            document.getElementById('content-area').innerHTML = '문의 디스코드 : sang_w27로 친추 주세요';
-        });
+        document.getElementById("gameUpdate").onclick = (e) => {
+            e.preventDefault();
+            c.innerHTML = `
+                <h2>🎮 게임 개발 로그</h2>
+                <p>현재 신규 포트폴리오 게임 개발 중...</p>
+                <ul>
+                    <li><span class="tag-add">[+]</span> 캐릭터 이동/회전 시스템 구현</li>
+                    <li><span class="tag-update">[/]</span> TPS 카메라 추적 보정</li>
+                    <li><span class="tag-add">[+]</span> 기본 전투 시스템 설계</li>
+                </ul>
+            `;
+        };
+
+        document.getElementById("contact").onclick = (e) => {
+            e.preventDefault();
+            c.innerHTML = `
+                <h2>📮 문의 / 외주</h2>
+                <p>디스코드 : <b>sang_w27</b><br>친추 후 DM 주세요.</p>
+                <p>개발, 웹사이트 제작, 게임 외주 가능합니다.</p>
+            `;
+        };
     </script>
 </body>
 </html>
