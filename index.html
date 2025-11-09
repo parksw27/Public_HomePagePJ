@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PSW.com</title>
+    <title>박상욱 포토폴리오 홈페이지 </title>
     <style>
         /* 기본 스타일 */
         body {
@@ -101,11 +101,11 @@
         </header>
 
         <section class="links">
-            <a href="#" id="game">게임</a>
+            <a href="#" id="game">포토폴리오</a>
             <a href="#" id="github">깃허브 사이트 접속</a>
             <a href="#" id="update">업데이트 내역</a>
-            <a href="#" id="gameUpdate">게임 업데이트 내역</a>
-            <a href="#" id="about">문의관련공지</a>
+            <a href="#" id="gameUpdate">포토폴리오 업데이트 내역</a>
+            <a href="#" id="about">문의,외주 관련공지</a>
         </section>
 
         <div class="content" id="content-area">
@@ -114,14 +114,14 @@
     </div>
 
     <footer>
-        <p>&copy; Project_FallowGun 홈페이지 모든 권리 보유</p>
+        <p>&copy; Project_PSW 홈페이지 모든 권리 보유</p>
         <p>저작권 침해시 고발하겠습니다.</p>
     </footer>
 
     <script>
         document.getElementById('game').addEventListener('click', function(event) {
             event.preventDefault();
-            document.getElementById('content-area').innerHTML = '게임에 대한 정보가 여기에 표시됩니다.';
+            document.getElementById('content-area').innerHTML = '포토폴리오에 대한 정보가 여기에 표시됩니다.';
         });
 
         document.getElementById('github').addEventListener('click', function(event) {
@@ -141,8 +141,8 @@
 
         document.getElementById('gameUpdate').addEventListener('click', function(event) {
             event.preventDefault();
-            document.getElementById('content-area').innerHTML = '게임 업데이트에 대한 상세 내역입니다.[+] : 추가 , [-] : 삭제 , [/] 업데이트<br><br><br><br><br><br>' + 
-            `게임 만드는 중....`;
+            document.getElementById('content-area').innerHTML = '포토폴리오 업데이트에 대한 상세 내역입니다.[+] : 추가 , [-] : 삭제 , [/] 업데이트<br><br><br><br><br><br>' + 
+            `포토폴리오 만드는 중....`;
         });
 
         document.getElementById('about').addEventListener('click', function(event) {
